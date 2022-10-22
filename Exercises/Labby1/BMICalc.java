@@ -18,7 +18,7 @@ public class BMICalc
 
     static void printIntroduction()
     {
-        System.out.println("Hello. This is a Body Mass Index (BMI) Calculator.");
+        System.out.println("Welcome to Body Mass Index Calculator v1.0!");
     }
 
     static double getBMI(Scanner scan)
