@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.util.*;
 
 public class BMICalc
@@ -7,13 +6,12 @@ public class BMICalc
     {
 
         Scanner scan = new Scanner(System.in);
-        DecimalFormat dcf = new DecimalFormat();
-
+       
         printIntroduction();
         double bmi = getBMI(scan);
         String status = getStatus(bmi);
 
-        ReportResults(bmi, status,dcf);
+        ReportResults(bmi, status);
 
         scan.close();
     }
@@ -56,10 +54,9 @@ public class BMICalc
         return status.toUpperCase();
     }
 
-    static void ReportResults (double bmi, String status,DecimalFormat dcf)
+    static void ReportResults (double bmi, String status)
     {
-
-        System.out.println("You nave a BMI of: \""+dcf.format(bmi)+"\" and you are "+ status);
+        System.out.printf("You nave a BMI of %.2f and your status is: %s", bmi, status);
     }
 
 
