@@ -33,7 +33,7 @@ public class FirmET extends Firm
         FirmET firm1 = new FirmET();
         FirmET firm2 = new FirmET();
 
-        firm1.setName("HuiSoft");
+        firm1.setName("KebabSoft");
         firm1.setFounding_date("2003");
         firm1.setBulstat("1w3c5v7n8i");
 
