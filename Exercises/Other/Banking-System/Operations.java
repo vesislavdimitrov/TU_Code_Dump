@@ -36,13 +36,12 @@ public class Operations {
                 case 2 -> {
                     System.out.print("Enter deposit amount: ");
                     customer.account.deposit(scan.nextDouble());
-                    System.out.println("Deposited successfully!");
+
                 }
                 case 3 -> {
                     if(customer.account.getBalance()>0){
                         System.out.print("Enter withdraw amount: ");
                         customer.account.withdraw(scan.nextDouble());
-                        System.out.println("Withdrew successfully!");
                     }
                     else{
                         System.out.println("Not enough funds!");
