@@ -27,12 +27,13 @@ public class Account {
 
     }
 
-    public void deposit(double amount){
+     public void deposit(double amount){
 
         balance = balance+amount;
+        System.out.println("Deposited successfully!");
     }
     
-   public void withdraw(double amount){
+    public void withdraw(double amount){
 
         if(balance>0){
             if((balance - amount) <0){
