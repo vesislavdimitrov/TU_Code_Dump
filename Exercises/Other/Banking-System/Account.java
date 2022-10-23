@@ -31,19 +31,18 @@ public class Account {
 
         balance = balance+amount;
     }
-    public void withdraw(double amount){
+    
+   public void withdraw(double amount){
 
         if(balance>0){
-            balance = balance-amount;
+            if((balance - amount) <0){
+                System.out.println("Not enough funds!");
+                System.out.println("Your balance will be: "+ (getBalance() - amount));
+            }
+            else{
+                balance = balance-amount;
+                System.out.println("Withdrew successfully!");
+            }
         }
-
     }
-
-
-
-
-
-
-
-
 }
