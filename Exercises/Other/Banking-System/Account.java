@@ -16,8 +16,8 @@ public class Account {
     public String getId() {
         return id;
     }
-
     public void setId(String id) {
+
         if(id.length()==8){
             this.id = id;
         }
@@ -26,13 +26,11 @@ public class Account {
         }
 
     }
-
-     public void deposit(double amount){
+    public void deposit(double amount){
 
         balance = balance+amount;
         System.out.println("Deposited successfully!");
     }
-    
     public void withdraw(double amount){
 
         if(balance>0){
@@ -45,5 +43,14 @@ public class Account {
                 System.out.println("Withdrew successfully!");
             }
         }
+
     }
+
+
+
+
+
+
+
+
 }
