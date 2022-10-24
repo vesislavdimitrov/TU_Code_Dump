@@ -10,11 +10,24 @@ public class Operations {
 
         System.out.println("Enter your name: ");
         customer.setName(scan.nextLine());
-        System.out.println("Hello, "+customer.getName()+", please insert your account ID: ");
-        customer.setAccount(new Account(scan.nextLine()));
 
-        checkId(customer);
+        System.out.println("Hello, "+customer.getName()+", What kind of an account do you have (VIP / Normal)?");
+        String accountType = scan.nextLine();
+        if(accountType.equalsIgnoreCase("Normal")){
 
+            System.out.println("Please insert your account ID: ");
+            customer.setAccount(new Account(scan.nextLine()));
+
+            checkId(customer);
+        }
+        if(accountType.equalsIgnoreCase("VIP")){
+
+            System.out.println("Please insert your account ID: ");
+            customer.setAccount(new VIPAccount(scan.nextLine()));
+
+            checkId(customer);
+
+        }
 
         System.out.println("====================================");
         System.out.println("=/////////// OPERATIONS ///////////=");
@@ -39,12 +52,18 @@ public class Operations {
 
                 }
                 case 3 -> {
-                    if(customer.account.getBalance()>0){
+
+                    if (customer.account instanceof VIPAccount){
                         System.out.print("Enter withdraw amount: ");
                         customer.account.withdraw(scan.nextDouble());
                     }
                     else{
-                        System.out.println("Not enough funds!");
+                        if (customer.account.getBalance() > 0) {
+                            System.out.print("Enter withdraw amount: ");
+                            customer.account.withdraw(scan.nextDouble());
+                        } else {
+                            System.out.println("Not enough funds!");
+                        }
                     }
                 }
                 case 0 -> {
@@ -72,6 +91,5 @@ public class Operations {
             customer.setAccount(new Account(scan.nextLine()));
         }
     }
-
 
 }
