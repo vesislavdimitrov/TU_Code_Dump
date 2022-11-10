@@ -57,19 +57,4 @@ public class House extends Building{
         return temp;
     }
 
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
