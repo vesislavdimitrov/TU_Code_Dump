@@ -35,7 +35,7 @@ public class Account {
 
         if(balance>0){
             if((balance - amount) <0){
-                System.out.println("Not enough funds!");
+                System.err.println("Not enough funds!");
                 System.out.println("Your balance will be: "+ (getBalance() - amount));
             }
             else{
