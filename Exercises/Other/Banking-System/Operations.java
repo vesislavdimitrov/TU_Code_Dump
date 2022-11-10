@@ -62,7 +62,7 @@ public class Operations {
                             System.out.print("Enter withdraw amount: ");
                             customer.account.withdraw(scan.nextDouble());
                         } else {
-                            System.out.println("Not enough funds!");
+                            System.err.println("Not enough funds!");
                         }
                     }
                 }
@@ -87,7 +87,7 @@ public class Operations {
 
         while (customer.account.getId().equals("Invalid ID!")) {
 
-            System.out.println("Please enter a valid 8-symbol id!");
+            System.err.println("Please enter a valid 8-symbol id!");
             customer.setAccount(new Account(scan.nextLine()));
         }
     }
